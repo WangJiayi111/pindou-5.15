@@ -16,6 +16,7 @@ input, select, textarea, button {
     box-sizing: border-box;
 }
 
+
 html{scroll-padding-top: 150px;  
     scroll-behavior: smooth;   }
 

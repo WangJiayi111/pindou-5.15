@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prevSlide();
     startAutoSlide();
   });
+  
 
   // hover 暂停
   carousel?.addEventListener("mouseenter", stopAutoSlide);
