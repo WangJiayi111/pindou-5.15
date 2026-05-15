@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perler Beads Gallery</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Silkscreen&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+<nav id="navbar">
+    <a href="#" class="navbar-brand">
+        <span class="brand-icon">🧩</span> PERLER BEADS
+    </a>
+    <div class="menu-icon" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul id="navLinks">
+        <li><a href="#gallery">GALLERY</a ></li>
+        <li><a href="#guide">GUIDE</a ></li>
+        <li><a href="#other">Unique</a ></li>
+            <li><a href="#pricing">PRICING</a></li> 
+        <li><a href="#beads-faq">FAQ</a ></li>
+         
+        <li><a href="#registration">BOOK</a ></li>
+    </ul>
+    <div id="userArea" class="user-area">
+        <span id="userWelcome"></span>
+        <button id="loginBtn" class="user-action-btn login-btn">Login</button>
+        <button id="registerBtn" class="user-action-btn register-btn">Register</button>
+        <button id="logoutBtn" class="user-action-btn logout-btn" style="display:none;">Logout</button>
+    </div>
+</nav>
+
+<div class="home-banner" id="homeBanner">
+    <img src="pindou8.jpg" alt="Perler Beads Banner">
+</div>
+
+<section class="carousel hero" id="carousel">
+    <div class="carousel-slides">
+    <div class="carousel-slide active" >
+        <img src="pindou9.jpg" alt="picture for perler beads1">
+        <div class="caption">
+            <h3>The lovely princess</h3>
+        </div>
+    </div>
+    <div class="carousel-slide" >
+        <img src="pindou10.jpg" alt="picture for perler beads2"loading="lazy">
+        <div class="caption">
+            <h3>Elegant and lovely little baby</h3>
+        </div>
+    </div>
+    <div class="carousel-slide" >
+        <img src="pindou11.jpg" alt="picture for perler beads3"loading="lazy">
+        <div class="caption">
+            <h3>Judy and Nick from Zootopia</h3>
+        </div>
+    </div>
+    <div class="carousel-slide" >
+        <img src="pindou12.jpg" alt="picture for perler beads4"loading="lazy">
+        <div class="caption">
+            <h3>A little cat holding a rose</h3>
+        </div>
+    </div>
+    <div class="carousel-slide" >
+        <img src="pindou13.jpg" alt="picture for perler beads5"loading="lazy">
+        <div class="caption">
+            <h3>Angry Hellokitty</h3>
+        </div>
+    </div>
+  </div>  
+
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+    <div id="carousel-dots" class="navigation"></div>
+
+</section>
+
+
+<section id="gallery">
+    <h1>GALLERY · Perler Bead Inspirations</h1>
+    <p>Hover over any card to see the description — click the dots to switch images — click on any image to zoom in</p>
+    <div class="gallery-container">
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou1.jpg" alt="hello Kitty 1" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-img" src="pindou2.jpg" alt="hello Kitty 2" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is the ever-popular Hello Kitty. It features a red and white color scheme and is complemented by a bell-shaped keychain.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou3.jpg" alt="Bear" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is Mr. Bean's toy bear. Most of it is made of brown material.</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou4.jpg" alt="Dinosaur 1" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-img" src="pindou5.jpg" alt="Dinosaur 2" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is a red dinosaur that can be used as a coaster.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou6.jpg" alt="Cat 1" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-img" src="pindou7.jpg" alt="Cat 2" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is a cat from an animated film. It is ironed using towel-ironing technique.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou14.jpg" alt="Rabbit" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This cute pixel art Miffy rabbit, dressed in blue and green, sits gently with its iconic simple, adorable facial design.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou15.jpg" alt="Mouse" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is a cute mouse that can be used as a pendant.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou16.jpg" alt="Beagle dog" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is an angry beagle that can be used as a pendant.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou17.jpg" alt="Walking Bear" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is a cute golden retriever that can be made into a coaster.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img class="slide-img" src="pindou18.jpg" alt="Crayon Shin-chan" loading="lazy">
+                    </div>
+                </div>
+                <div class="nav-dots"></div>
+            </div>
+            <div class="card-overlay">
+                <div class="overlay-text">This is Yakumo Minami eating noodles. It can be used to make a coaster.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="guide">
+    <h1>GUIDE · Perler Bead Tutorial</h1>
+    <div class="guide-grid">
+        <div class="guide-card"
+             data-img="pindou.background.jpg"
+             data-desc="Perler beads come in 100+ colors! From solids to neon, pastel, glitter, and even striped patterns. Popular sets include 22, 50, or 110 colors."
+             style="background-image: url('pindou.background.jpg');">
+            <h3>Colors</h3>
+        </div>
+
+        <div class="guide-card"
+             
+             data-img="pindou.process.jpg"
+             data-desc="Design - Place beads on pegboard. Fuse - Cover with parchment paper and iron until beads melt. Cool completely, then peel paper. Display - Turn into keychains, magnets, coasters, or wall art!"
+             style="background-image: url('pindou.process.jpg');">
+
+            <h3>The Process</h3>
+
+        </div>
+
+        <div class="guide-card"
+             
+             data-img="pindou.iron.jpg"
+             data-desc="Set iron to medium . Iron in small circles for 10-20 seconds. Don't over-melt -keep holes visible for classic look. Place a heavy book on top while cooling."
+             style="background-image: url('pindou.iron.jpg');">
+
+            <h3>Ironing Tips</h3>
+
+        </div>
+
+        <div class="guide-card"
+             
+             data-img="pindou.cattern.jpg"
+             data-desc="Pixel art sprites, keychains, fridge magnets, jewelry, 3D objects, ornaments, coasters, and giant wall murals. Perfect for gifts!"
+             style="background-image: url('pindou.cattern.jpg');">
+
+            <h3>What You Can Make</h3>
+
+        </div>
+
+    </div>
+    <article class="featured-article">
+
+    <div class="featured-content">
+
+        <span class="article-label"><h1>FEATURED ARTICLE</h1></span>
+
+        <h2>Why Pixel Art Crafts Are Becoming Popular Again</h2>
+
+        <p>
+            Inspired by retro video games and handmade DIY culture,
+            Perler bead creations have become one of the most relaxing
+            and creative hobbies among teenagers and craft lovers.
+        </p>
+
+
+        
+        <p>
+            Many people enjoy turning tiny colorful beads into cute
+            characters, coasters, keychains, and decorative artwork
+            while sharing their creations online through creative communities.
+        </p>
+
+    </div>
+
+    <div class="featured-image">
+
+        <img src="b.png" alt="Pixel Art Craft">
+
+    </div>
+
+</article>
+</section>
+
+<div class="guide-modal" id="guideModal">//no
+
+    <div class="modal-content">
+
+        <span class="close-btn" id="closeModal">&times;</span>
+
+        <img id="modalImg" src="" alt="">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDesc"></p>  
+
+    </div>
+
+</div>
+
+
+
+
+<section id="other">
+<div id="app">
+    <h1>Which Character Are You Intersted In?</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-6" v-for="trait in traits" :key="trait">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" v-model="selectedTraits" :value="trait" :id="trait">
+            <label class="form-check-label" :for="trait">{{ trait }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-2 col-md-4 mx-auto mt-4">
+      <button @click="findCharacter" class="btn btn-primary">Reveal My Match</button>
+      <button @click="clearChoice" class="btn btn-secondary">Clear Choice</button>
+    </div>
+
+    <div v-if="result" class="character-result">
+          <p v-show="selectedTraits.length > 0">
+  You selected {{ selectedTraits.length }} traits.
+</p>
+      <p>You are possible intersted in <strong>{{ result.name }}</strong>! </p>
+      <img :src="result.image" :alt="result.name" class="character-img img-fluid mt-3 mx-auto d-block" style="max-width: 300px; border-radius: 20px;">
+      
+    </div>
+
+
+
+    <div v-else-if="noResult" class="alert alert-warning mt-3">
+      <p>Hmm... Either you didn't select any traits or we couldn't find a match. Please try again.</p>
+    </div>
+
+  
+  </div>
+
+
+
+</section>
+
+  
+
+<section id="pricing">
+    <h1>WORKSHOP · Pricing Table</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Workshop Type</th>
+                    <th>Duration</th>
+                    <th>Materials Included</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Beginner Workshop</td>
+                    <td>1 Hour</td>
+                    <td>Basic Beads + Pegboard</td>
+                    <td>$15</td>
+                </tr>
+
+                <tr>
+                    <td>Creative Workshop</td>
+                    <td>2 Hours</td>
+                    <td>Premium Colors + Keychain</td>
+                    <td>$28</td>
+                </tr>
+
+                <tr>
+                    <td>Family Package</td>
+                    <td>2.5 Hours</td>
+                    <td>All Materials Included</td>
+                    <td>$45</td>
+                </tr>
+
+                <tr>
+                    <td>Advanced Pixel Art</td>
+                    <td>3 Hours</td>
+                    <td>Large Board + Special Beads</td>
+                    <td>$60</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- BOOTSTRAP ACCORDION SECTION -->
+<section id="beads-faq" style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Perler Beads FAQ</h2>
+    <div class="accordion" id="perlerAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    What are Perler beads?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#perlerAccordion">
+                <div class="accordion-body">
+                    Perler beads are small, plastic fusible beads. You arrange them on a pegboard, then iron them to melt together into a solid design.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    What ironing temperature should I use?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#perlerAccordion">
+                <div class="accordion-body">
+                    Use a medium heat (without steam). Iron in small circular motions for about 10–20 seconds until beads fuse but holes remain visible.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Can I reuse pegboards?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#perlerAccordion">
+                <div class="accordion-body">
+                    Yes, pegboards are reusable. Wash them gently with warm water and soap if wax from ironing builds up.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    What can I make with Perler beads?
+                </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#perlerAccordion">
+                <div class="accordion-body">
+                    Keychains, magnets, coasters, 3D figures, ornaments, pixel art, and even large wall murals.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    Are Perler beads safe for kids?
+                </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#perlerAccordion">
+                <div class="accordion-body">
+                    Yes, but adult supervision is required for ironing. For young children, use larger-sized beads and avoid small parts.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                    How do I prevent warping while cooling?
+                </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#perlerAccordion">
+                <div class="accordion-body">
+                    Place a heavy flat book on top of the design immediately after ironing, while it's still warm, and let it cool completely.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="registration">
+    <form id="registrationform">
+        <h2> Book Your Perler Beads Workshop</h2>
+            <br />
+        <label for="name">Your Full Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError"></span><br />
+
+        <label for="email">Your Email Address:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span><br />
+
+        <label for="date-of-visit">When would you like to come in to make?</label>
+        <input type="date" id="date-of-visit" name="date-of-visit">
+        <span class="error" id="visitDateError"></span><br />
+
+        <label for="no-of-customers">How many are coming?</label>
+        <select name="no-of-customers" id="no-of-customers">
+            <option value="">---Select---</option>
+                <option value="One">One</option>
+                <option value="Two">Two</option>
+                <option value="Three">Three</option>
+                <option value="Four">Four or more</option>
+            </select>
+            <span class="error" id="customersError"></span><br />
+
+        <label for="comments">Special Requests(Optional):</label>
+        <textarea id="comments" name="comments" rows="3" placeholder="Any special requests?(Corner seat,Near display wall...)"></textarea><br />
+
+        <button type="submit">Book</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Perler Beads Gallery</p >
+    <p>Email: perler@craftworld.com</p >
+</footer>
+
+
+
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed image">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js" defer></script>
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="login-modal">
+    <div class="login-modal-content">
+        <div class="modal-close" id="closeLoginModal">&times;</div>
+        <div class="modal-header">
+            <div class="modal-icon">🧩</div>
+            <h2>Welcome Back</h2>
+            <p>Sign in to explore the gallery</p>
+        </div>
+        <div class="modal-body">
+            <div class="input-with-icon">
+                <span class="input-icon">👤</span>
+                <input type="text" id="loginUsername" placeholder="Username">
+            </div>
+            <div class="input-with-icon">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="loginPassword" placeholder="Password">
+            </div>
+            <button id="doLoginBtn" class="modal-btn">Login →</button>
+            <div id="loginMessage" class="modal-message"></div>
+        </div>
+        <div class="modal-footer">
+            <p>No account? <button id="switchToRegister" class="modal-link">Register</button></p>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="login-modal">
+    <div class="login-modal-content">
+        <div class="modal-close" id="closeRegisterModal">&times;</div>
+        <div class="modal-header">
+            <div class="modal-icon">✨</div>
+            <h2>Create Account</h2>
+            <p>Join the Perler community</p>
+        </div>
+        <div class="modal-body">
+            <div class="input-with-icon">
+                <span class="input-icon">👤</span>
+                <input type="text" id="regFullname" placeholder="Full Name">
+            </div>
+            <div class="gender-group">
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+            </div>
+            <div class="input-with-icon">
+                <span class="input-icon">🎂</span>
+                <input type="number" id="regAge" placeholder="Age">
+            </div>
+            <div class="input-with-icon">
+                <span class="input-icon">📧</span>
+                <input type="email" id="regEmail" placeholder="Email">
+            </div>
+            <div class="input-with-icon">
+                <span class="input-icon">👤</span>
+                <input type="text" id="regUsername" placeholder="Username">
+            </div>
+            <div class="input-with-icon">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="regPassword" placeholder="Password">
+            </div>
+            <button id="doRegisterBtn" class="modal-btn">Register →</button>
+            <div id="registerMessage" class="modal-message"></div>
+        </div>
+        <div class="modal-footer">
+            <p>Already have an account? <button id="switchToLogin" class="modal-link">Login</button></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
